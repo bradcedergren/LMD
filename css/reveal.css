@@ -1,0 +1,91 @@
+.reveal-modal-bg 			{ z-index: 100; }
+.reveal-modal 				{ visibility: hidden; z-index: 101;}
+.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+
+.reveal-modal .close-reveal-modal {
+	position: absolute;
+	top: 8px;
+	right: 11px;
+	cursor: pointer;
+	background-image: url('../img/button-close.png');
+	height: 18px;
+	width: 18px;
+} 
+
+/* Dough Boy Popup*/
+#doughBoy {
+	position: fixed;
+	height: 212px;
+	width: 178px;
+	color: #fff;
+	font-size: 16pt;
+	background-color: #214185;
+	top: 100px; 
+	left: 80%;
+	margin-right: 10px;
+	padding: 30px 40px 34px;
+}
+
+#doughBoy img {
+	position: absolute;
+	left: -80px;
+}
+
+#doughBoy p {
+	margin: 0 0 0 50px;
+	font-size:small;
+}
+
+/* SiteBar */
+#siteBarContainer {
+	position:fixed;
+}
+
+#siteBar {
+	position: fixed;
+	float:bottom;
+	height: 44px;
+	/*width: 100%;*/
+	color: #fff;
+	background-color: #93d8ee;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+
+#siteBar p {
+	position: absolute;
+	color: #322C33;
+	font-size: 10pt;
+	margin: 3px 0 0 20px;
+	
+}
+
+#signMeUp img{
+	position: absolute;
+	left: 450px;
+	padding: 8px;
+}
+
+.followNav {
+	position: absolute;
+	right: 250px;
+}
+.followNav p {
+	position: absolute;
+	width: 200px;
+	font-size: 12px;
+	right: 120px;
+	margin: 5px 10px !important;
+}
+
+.followNav img {
+	clear: left;
+	float: right;
+	padding: 8px;
+}
+
+/*  */

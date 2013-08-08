@@ -1,0 +1,186 @@
+/* Brands Menu */
+
+#menu {
+	display: block;
+	position:relative;
+	width: 100%;
+	margin: -50px 100px 0 250px;
+}
+
+.menu{
+	padding-top:2px;
+	width: 100%;}
+
+.menu li {
+	float:left;
+	display:block;
+	text-align:center;
+	position:relative;
+	border:none;
+	margin: 0 15px;
+}
+
+.menu li:hover {
+	display:block;
+	background:#F4F4F4;
+}
+
+.menu li a#brands{
+	color: #7DAC47;
+	padding: 15px;
+}
+
+.menu li:hover a#brands{
+	height: 66px;
+	background-color: #7DAC47;
+	color: #fff;
+}
+
+.menu li a#recipestips{
+	color: #EB8363;
+	padding: 15px;
+}
+
+.menu li:hover a#recipestips{
+	height: 66px;
+	background-color: #EB8363;
+	color: #fff;
+}
+
+.menu li a#blogs{
+	color: #337F83;
+	padding: 15px;
+}
+
+.menu li:hover a#blogs{
+	height: 66px;
+	background-color: #337F83;
+	color: #fff;
+}
+
+.menu li a#offers{
+	color: #F33900;
+	padding: 15px;
+}
+
+.menu li:hover a#offers{
+	height: 66px;
+	background-color: #F33900;
+	color: #fff;
+}
+
+.menu li a {
+	text-decoration:none;
+}
+
+.menu li:hover a {
+	color:#fff;
+}
+
+.menu img {
+	padding: 10px 20px;
+}
+
+.dropdown-1column, 
+.dropdown-2columns, 
+.dropdown-3columns, 
+.dropdown-4columns {
+	margin:20px;
+	float:left;
+	position:absolute;
+	left:-999em;
+	text-align:left;
+}
+
+.dropdown-1column {width: 145px;}
+.dropdown-2columns {width: 380px;}
+.dropdown-3columns {width: 420px;}
+.dropdown-4columns {width: 920px; height: 268px}
+
+.menu li:hover .dropdown-1column, 
+.menu li:hover .dropdown-2columns, 
+.menu li:hover .dropdown-3columns,
+.menu li:hover .dropdown-4columns {
+	left:-300px;
+	top:20px;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 1;
+	margin-right: 1;
+}
+.col-1 {width:260px; height: 268px}
+.col-2, .col-3, .col-4 {width:220px; height: 268px}
+.col-1, .col-3 { background-color: #D9D4C7 }
+.col-2, .col-4 { background-color: #E8DFCF }
+
+.menu p, .menu h2, .menu h3, .menu ul li {
+	line-height:21px;
+	font-size:12px;
+	text-align:left;
+}
+.menu h2 {
+	font-size:35px;
+	font-weight:400;
+	color: #005AB0;
+	line-height:33px;
+	margin:7px 0 14px 0;
+	padding-bottom:14px;
+}
+
+.menu h3 {
+	font-size:22px;
+	margin:7px 0 14px 0;
+	padding-bottom:7px;
+	color: #005AB0;
+}
+
+.menu p {
+	line-height:18px;
+	margin:0 0 22px 0;
+}
+
+.menu li:hover div a {
+	padding-left:3px;
+	font-size:15px;
+	color:#003e62;
+    height: 24px;
+    width: 450px;
+}
+
+.menu li ul {
+	list-style:none;
+	padding:10px;
+	margin:0 0 12px 0;
+}
+
+.menu li ul li {
+	font-size:12px;
+	line-height:24px;
+	position:relative;
+	padding:0;
+	margin:0;
+	float:none;
+	text-align:left;
+}
+
+.menu li ul li:hover {
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+.menu li ul li a {
+	
+}
+
+.menu li ul li a:hover {
+	background: #3277B8;	
+}
