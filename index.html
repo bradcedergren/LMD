@@ -11,8 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/main.css" />
@@ -100,15 +99,18 @@
 					<a class="grid-35 mobile-grid-25 blue">Create A Profile</a>
 					<a class="grid-15 prefix-10 mobile-grid-25">English</a>
 					<a class="grid-15 mobile-grid-25 inactive">Français</a>
-					<div id="searchBox" class="grid-100 mobile-grid-100">
-						<input class="search" id="search" placeholder="Search for Tips, Recipes & Products"/><a href="#"><img src="img/search.png" /></a>
-					</div>
+					<form>
+						<div class="grid-100 mobile-grid-100 grid-parent;">
+							<input class="grid-95 search" placeholder="Search for Tips, Recipes & Products" />
+							<button type="submit" class="searchbutton"><i class="icon-search orange"></i></button>
+						</div>
+					</form>
 				</div>
 				<div class="mobile-grid-40 hide-on-desktop mobile-image">
 					<a class="bttn mobile-grid-60 mobilemenu-toggle"><img src="img/menu-button.png" /></a>
 					<a class="bttn mobile-grid-35 mobile-prefix-5"><img src="img/search-button.png" /></a>
 					<a class="mobile-grid-50 blue">Sign In</a>
-					<a class="mobile-grid-50 blue">English</a>
+					<a class="mobile-grid-50 blue">Français</a>
 				</div>
 			</section>
 			<nav class="mobile-grid-60 startHidden" id="NavSlide">
@@ -148,8 +150,11 @@
 					<div class="grid-45 mobile-grid-100 grabber blueBorderRight">
 						<h1>Make every day extra <span class="textPeach">yummy</span></h1>
 					</div>
-					<div class="grid-45 prefix-5 mobile-grid-100 grabber">
-						<h1 style="font-weight:700;">Make every day extra <span class="textPeach">yummy</span></h1>
+					<div class="grid-40 prefix-5 grabber mobile-grid-100">
+						<p>
+							Here's to a life filled with tasty meals, sweet memories and deliciously new discoveries. Recipes, tips and ideas.
+							<a class="push">It all starts here <i class="icon-caret-right black"></i></a>
+						</p> 
 					</div>
 					<div class="grid-100 mobile-grid-100 grid-parent slider bigSection">
 						<img src="img/yumcake.jpg" />
@@ -159,18 +164,20 @@
 					Save $3 on <a class="push">GREEN GIANT&reg; VALLEY SELECTIONS</a> nad other great General Mills&reg; products 
 				</article>
 				<article class="grid-65 midSection grid-parent featured recipe">
-					<figure style="background-image:url(img/taco.jpg);">
-						<!-- <img src="img/taco.jpg" /> -->
-					</figure>
+					<a href="http://generalmills.com">
+						<figure style="background-image:url(img/taco.jpg);">
+							<!-- <img src="img/taco.jpg" /> -->
+						</figure>
+					</a>
 					<a class="add favorites off" title="add to favorites"></a>
 					<aside class="rating">
 						<span class="star full"></span><span class="star full"></span><span class="star full"></span><span class="star empty"></span><span class="star empty"></span>
 					</aside>
 					<details class="grid-45 mobile-grid-55 color1">
 						<h4>FEATURED RECIPE</h4>
-						<h2>Mexican Inspired Flavours</h2>
+						<h2><a href="http://generalmills.com">Mexican Inspired Flavours</a></h2>
 						<p>Enjoy Mexican Inspired flavours and textures of tacos in a leafy gren salad</p>
-						<a class="push">See Recipe <i class="icon-caret-right white"></i></a>
+						<a href="http://generalmills.com" class="push">See Recipe <i class="icon-caret-right white"></i></a>
 					</details>
 				</article>
 				<article class="grid-65 midSection grid-parent featured blog">
@@ -189,7 +196,9 @@
 					</details>
 				</article>
 				<article class="grid-30 prefix-5 midSection grid-parent facebook">
-					<h2>Facebook</h2>
+					<iframe src="http://www.facebook.com/plugins/activity.php?site=cheerios.com&width=300&height=300&header=true&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:300px; height:300px">
+						No iFrames? What the hell?
+					</iframe>
 				</article>
 				<article class="grid-45 suffix-5 smallSection grid-parent featured blog">
 					<figure style="background-image:url(img/chocolatecake.jpg);">
@@ -200,8 +209,8 @@
 						<span class="star full"></span><span class="star full"></span><span class="star full"></span><span class="star full"></span><span class="star full"></span>
 					</aside>
 					<details class="grid-55 mobile-grid-55 color3">
-						<h2>All About Chocolate</h2>
-						<summary>Chocolate. Just reading the word makes your mouth start to water, doesn't it?</summary>
+						<h2>All About Chocolate All About Chocolate</h2>
+						<summary>Chocolate. Just reading the word makes your mouth start to water, doesn't it? Chocolate. Just reading the word makes your mouth start to water, doesn't it?</summary>
 						<a class="push">Read more <i class="icon-caret-right white"></i></a>
 					</details>
 				</article>
@@ -223,6 +232,7 @@
 		</div>
 		<div id="BrandFamily">
 			<nav class="grid-container brands">
+				<h1 class="grid-100 mobile-grid-100">Our Brand Family</h1>
 				<a class="grid-20 mobile-grid-33">Betty Crocker</a>
 				<a class="grid-20 mobile-grid-33">Cheerios</a>
 				<a class="grid-20 mobile-grid-33">Chex</a>
@@ -238,7 +248,7 @@
 					<strong>Life Made Delicious &mdash;</strong><br />the place to get easy recipes and quick dinner ideas so you can make life more delicious.
 				</div>
 				<div class="grid-20">
-					About LMD
+					<a>About LMD</a>
 				</div>
 				<div class="grid-20">
 					<a>Feedback</a><br />
