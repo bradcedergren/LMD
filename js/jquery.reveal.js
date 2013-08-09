@@ -1,19 +1,45 @@
+/*
+ * jQuery Reveal Plugin 1.0
+ * www.ZURB.com
+ * Copyright 2010, ZURB
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+*/
+
+
 (function($) {
+
+/*---------------------------
+ Defaults for Reveal
+----------------------------*/
+	 
+/*---------------------------
+ Listener for data-reveal-id attributes
+----------------------------*/
+
 	$('a[data-reveal-id]').live('click', function(e) {
 		e.preventDefault();
 		var modalLocation = $(this).attr('data-reveal-id');
 		$('#'+modalLocation).reveal($(this).data());
 	});
-	
 
-    $.fn.reveal = function(options) {       
+/*---------------------------
+ Extend and Execute
+----------------------------*/
+
+    $.fn.reveal = function(options) {
+        
+        
         var defaults = {  
-	    	animation: 'fade',
-		    closeonbackgroundclick: false,
-		    dismissmodalclass: 'close-reveal-modal'
+	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
+		    animationspeed: 300, //how fast animtions are
+		    closeonbackgroundclick: true, //if you click background will modal close?
+		    dismissmodalclass: 'close-reveal-modal' //the class of a button or element that will close an open modal
     	}; 
     	
+        //Extend dem' options
         var options = $.extend({}, defaults, options); 
+	
         return this.each(function() {
         
 /*---------------------------
@@ -41,12 +67,25 @@
 				$('.' + options.dismissmodalclass).unbind('click.modalEvent');
 				if(!locked) {
 					lockModal();
+					if(options.animation == "fadeAndPop") {
+						modal.css({'top': $(document).scrollTop()-topOffset, 'opacity' : 0, 'visibility' : 'visible'});
+						modalBG.fadeIn(options.animationspeed/2);
+						modal.delay(options.animationspeed/2).animate({
+							"top": $(document).scrollTop()+topMeasure + 'px',
+							"opacity" : 1
+						}, options.animationspeed,unlockModal());					
+					}
 					if(options.animation == "fade") {
 						modal.css({'opacity' : 0, 'visibility' : 'visible', 'top': $(document).scrollTop()+topMeasure});
 						modalBG.fadeIn(options.animationspeed/2);
 						modal.delay(options.animationspeed/2).animate({
 							"opacity" : 1
 						}, options.animationspeed,unlockModal());					
+					} 
+					if(options.animation == "none") {
+						modal.css({'visibility' : 'visible', 'top':$(document).scrollTop()+topMeasure});
+						modalBG.css({"display":"block"});	
+						unlockModal()				
 					}
 				}
 				modal.unbind('reveal:open');
@@ -56,6 +95,16 @@
 			modal.bind('reveal:close', function () {
 			  if(!locked) {
 					lockModal();
+					if(options.animation == "fadeAndPop") {
+						modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
+						modal.animate({
+							"top":  $(document).scrollTop()-topOffset + 'px',
+							"opacity" : 0
+						}, options.animationspeed/2, function() {
+							modal.css({'top':topMeasure, 'opacity' : 1, 'visibility' : 'hidden'});
+							unlockModal();
+						});					
+					}  	
 					if(options.animation == "fade") {
 						modalBG.delay(options.animationspeed).fadeOut(options.animationspeed);
 						modal.animate({
@@ -64,7 +113,11 @@
 							modal.css({'opacity' : 1, 'visibility' : 'hidden', 'top' : topMeasure});
 							unlockModal();
 						});					
-					}
+					}  	
+					if(options.animation == "none") {
+						modal.css({'visibility' : 'hidden', 'top' : topMeasure});
+						modalBG.css({'display' : 'none'});	
+					}		
 				}
 				modal.unbind('reveal:close');
 			});     

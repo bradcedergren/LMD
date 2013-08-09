@@ -23,4 +23,8 @@ $(function() {
 	setTimeout(function(){
     	$('#dough-boy').fadeToggle(400)
     },5000)
+    
+    setTimeout(function(){
+    	$('#login').fadeToggle(400)
+    },5000)
 });

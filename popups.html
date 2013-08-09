@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<title>pop ups</title>
+		
+		<!-- Attach our CSS -->
+	  	<link rel="stylesheet" href="css/reveal.css">	
+	  	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+		<!-- Attach necessary scripts -->
+		<!-- <script type="text/javascript" src="jquery-1.4.4.min.js"></script> -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+		<script type="text/javascript" src="js/jquery.reveal.js"></script>
+		<script type="text/javascript" src="js/delicious.js"></script>
+		
+		<!--[if lt IE 7.]>
+			<script defer type="text/javascript" src="js/pngfix.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>		
+		<a href="#" data-reveal-id="doughBoy" data-animation="fade">dough boy</a> | 
+		<a href="#" data-reveal-id="siteBar" data-animation="fade">site bar</a> |
+		<a href="#" class="big-link" data-reveal-id="login" data-animation="fade">login</a>
+
+		<div id="doughBoy" class="reveal-modal">
+			<img src="img/dough-boy.png" />
+			<p>Don’t <br />
+				forget to<br />
+				sign up for<br />
+				an extra<br />
+				<em>personalized</em><br />
+				Life Made<br />
+				Delicious<br />
+				experience!</p>
+				<a class="close-reveal-modal"><div class="close"></div></a>
+		</div>
+		
+		<div id="siteBar" class="reveal-modal">
+			<div id="notLoggedIn">
+				<p><strong>Join our community</strong> for deliciously personalized<br />
+				recipes, tips and coupons, serv ed up just for you</p>
+				<div id="signMeUp"><a href="#"><img src="img/sign-me-up.png" /></a></div>
+				<div class="followNav"><p>Follow LifeMadeDelicious</p> <a href="#"><img src="img/twitter-logo.png" /></a><a href="#"><img src="img/pintrest-logo.png" /></a><a href="#"><img src="images/facebook-logo.png" /></a></div>
+				<a class="close-reveal-modal"><div class="close"></div></a>
+			</div>
+			<div id="loggedIn" style="visibility: hidden">
+				<p>Welcome Daisy Buchanan</p> <img /> <p>Go to My Favourites</p>
+			</div>
+		</div>
+		
+		<div id="login" class="reveal-modal">
+			<div class="login-left">
+				<h1>Already a Member?</h1>
+				<p>Login to your account</p>
+				<input class="text" placeholder="Email" /><br />
+				<input class="text" placeholder="Password" /><br />
+				<input type="checkbox" /> <span class="input-text">Remember me</span> <a class="link-small" href="#">Forgot your password?</a><br />
+				<input type="image" src="img/sign-in.png" alt="Sign In" /> <input type="image" src="img/sign-in-facebook.png" alt"Sign In with Facebook" />
+			</div>
+			
+			<div class="login-right">
+				<span class="icon-star-empty"></span><h1>Sign Up Now!</h1><span class="icon-star-empty"></span>
+				<p>As a member you'll take advantage of:</p>
+				<ul class="member-list">
+					<li class="blue"><span class="icon-star-empty blue"></span> Exclusive offers</li>
+					<li class="grey"><span class="icon-star-empty grey"></span> Special promotions</li>
+					<li class="teal"><span class="icon-star-empty teal"></span> Personalized content</li>
+					<li class="green"><span class="icon-star-empty green"></span> New product info</li>
+				</ul>
+				<input type="image" src="img/sign-me-up.png" alt="Sign Me Up" />	 <input type="image" src="img/sign-up-facebook.png" alt="Sign Up with Facebook" />
+			</div>
+			<div class="bee"><img src="img/bee.png" /></div>
+			
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+		<script>
+		function fixPNGs(){
+		  if(jQuery.browser.msie && jQuery.browser.version < 9){ 
+		    var i;
+		    //alert(document.images.length);
+		    for(i in document.images){
+		      if(document.images[i].src){
+		        var imgSrc = document.images[i].src;
+		        if(imgSrc.substr(imgSrc.length-4) === '.png' || imgSrc.substr(imgSrc.length-4) === '.PNG'){
+		        document.images[i].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='crop',src='" + imgSrc + "')";
+		        }
+		      }
+		    }   
+		  }
+		}
+		</script>
+	</body>
+</html>
