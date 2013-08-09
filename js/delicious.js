@@ -21,6 +21,6 @@ $(function() {
     },3000)
 	
 	setTimeout(function(){
-    	$('#doughBoy').fadeToggle(400)
+    	$('#dough-boy').fadeToggle(400)
     },5000)
 });
