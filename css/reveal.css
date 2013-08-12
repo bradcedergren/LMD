@@ -159,7 +159,7 @@ ul.member-list{
 	top: -510px;
 	left: 335px;
 	z-index:101;
-	background-image: url("../img/bee.png");
+	background-image: url("../img/bee.png") no-repeat;
 }
 #login input.text{
 	width: 300px;
@@ -177,4 +177,78 @@ span.input-text{
 	font-size: .65rem;
 	font-weight: bold;
 	margin-left: 88px;
+}
+/* Login 2 */
+#login2 {
+	position:relative;
+	display: block;
+	height: auto;
+	width: 869px;
+	background-color:#e8e0d3;
+	border: solid #FFF 4px;
+	padding: 30px ;
+}
+
+#login2 p{
+	width: 550px;
+}
+
+.login-top {
+	
+}
+.col-one{
+	width: 400px;
+	float: left;
+	padding-bottom: 20px;
+}
+
+.col-two {
+	width: 469px;
+	float: left;
+}
+
+.list-col-one {
+	width: 200px;
+	float:left;
+}
+
+.list-col-two {
+	width: 200px;
+	float:left;
+}
+
+.col-two .list-col-one {
+	width:150px;
+	float:left;
+}
+
+.col-two .list-col-two {
+	width:150px;
+	float:left;
+}
+
+
+.col-two .list-col-three {
+	width:150px;
+	float:left;
+}
+.col-two-top {
+	width: 500px;
+}
+
+.col-two-bottom {
+	width: 500px;
+	clear:both;
+}
+
+.login-bottom {
+	clear:both;
+	border-top:dotted #fc5100 2px;
+	width: 95%;
+	padding: 10px;
+}
+
+.login-bottom img {
+	display: block;
+	float:right;
 }
